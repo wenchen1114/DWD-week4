@@ -5,6 +5,7 @@ let url = 0;
 let lonO = 0;
 let latO = 0;
 const api = '247473dab9ee14ca9fce974c750406b1';
+
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
@@ -19,7 +20,11 @@ function getLocation() {
       latO = lat*-1;
       url = `http://api.openweathermap.org/data/2.5/weather?lat=${latO}&lon=${lonO}&appid=${api}&units=metric`;
       getData();
-
+      //when button click
+      document.addEventListener('click',function(){
+        url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api}&units=metric`;
+        getData();
+      })
     });
   } else {
     document.getElementById('word').textContent= "Geolocation is not supported by this browser.";
@@ -34,7 +39,7 @@ function getData() {
     document.getElementById('weather').textContent = weather.main.temp+'°C';
     let icon = weather.weather[0].icon;
     console.log(icon);
-    let img = document.createElement("IMG");
+    let img = document.getElementById("IMG");
     img.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
     img.style.height = "300px";
     img.style.width = "300px";

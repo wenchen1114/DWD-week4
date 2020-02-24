@@ -26,12 +26,25 @@
               lat: latO,
               lng: lngO,
             };
-            let infoString = '<p style= "color: black; text-size: 2rem;">'+'This is the opposite side of you.'+'</p>';
+            let infoString = '<p style= "color: black; text-size: 3rem;">'+'This is the opposite side of you.'+'</p>';
             //marker.setMap(map);
             infoWindow.setPosition(pos);
             infoWindow.setContent(infoString);
             infoWindow.open(map);
             map.setCenter(pos);
+
+            document.addEventListener('click',function(){
+              pos = {
+                  lat: lat,
+                  lng: lng,
+              };
+              let infoString = '<p style= "color: black; text-size: 3rem;">'+'This is your current position.'+'</p>';
+              //marker.setMap(map);
+              infoWindow.setPosition(pos);
+              infoWindow.setContent(infoString);
+              infoWindow.open(map);
+              map.setCenter(pos);
+              })
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
           });
