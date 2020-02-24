@@ -51,32 +51,35 @@ html,body{
     align-items: flex-start;
 }
 
+.right__top{
+    height: 20%;
+}
+
 #title{
-    position: absolute;
-    top: 5rem;
-    padding-left: 2%;
+    height: 16%;
+    padding-left: 3%;
     font-size: 1rem;
 }
 
 #weather{
-    position: absolute;
-    top: 9.2rem;
-    padding-left: 2%;
+    height: 14%;
+    padding-left: 3%;
     font-size: 3rem;
 }
 
 #city{
-    position: absolute;
-    top: 13rem;
-    padding-left: 2%;
+    height:8%;
+    padding-left: 3%;
     font-size: 1rem;
 }
 
-#random{
-    position: absolute;
-    top: 15rem;
-    padding: 1%;
-    padding-left: 2%;
+.btn{
+    height:14%;
+    padding-left: 3%;
+}
+
+#current{
+    padding: 2% 0 2% 0;
     background-color:#ffffff;
     border: none;
     font-size: 0.7rem;
@@ -84,20 +87,19 @@ html,body{
     color: #0C2E63;
 }
 
-#random:hover{
-    color: #ffffff;
-    background-color: tomato;
+#current:hover{
+    text-decoration: line-through;
+    text-decoration-color: rgb(242, 58, 58);
 }
 
 .wiki{
-    position: absolute;
-    top: 18rem;
-    padding-left: 2%;
+    padding-left: 3%;
     font-size: 1rem;
 }
 
 .wiki a{
     text-decoration: none;
+    color:#0C2E63;
 }
 
 .wiki a:link {
@@ -105,5 +107,6 @@ html,body{
  }
 
 .wiki a:hover{
-    background-color: tomato;
+    text-decoration: line-through;
+    text-decoration-color: rgb(242, 58, 58);
 }

@@ -21,6 +21,7 @@
             }else{
               lngO = lng+180;
             }
+    
             latO = lat*-1;
             var pos = {
               lat: latO,
@@ -33,7 +34,7 @@
             infoWindow.open(map);
             map.setCenter(pos);
 
-            document.addEventListener('click',function(){
+            document.getElementById('current').addEventListener('click',function(){
               pos = {
                   lat: lat,
                   lng: lng,

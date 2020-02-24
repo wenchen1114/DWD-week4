@@ -21,7 +21,7 @@ function getLocation() {
       url = `http://api.openweathermap.org/data/2.5/weather?lat=${latO}&lon=${lonO}&appid=${api}&units=metric`;
       getData();
       //when button click
-      document.addEventListener('click',function(){
+      document.getElementById('current').addEventListener('click',function(){
         url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api}&units=metric`;
         getData();
       })
